@@ -1,0 +1,335 @@
+﻿<!DOCTYPE html>
+<html style="width:100%;height:100%;">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery.js"></script>
+</head>
+
+<body style="width:100%;height:100%;">
+    <div id="mchart" style="width:100%;height:100%;"></div>
+</body>
+<script>
+    var myChart = echarts.init(document.getElementById('mchart'));
+    myChart.showLoading();
+    var data = {
+        "counties": ["国内增值税", "国内消费税", "进口货物增值税、消费税", "出口货物增值税、消费税", "营业税", "企业所得税", "资源税"],
+        "timeline": [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+        "series": [
+            [
+                [25.38, 18514.96, 40, "国内增值税", 2010],
+                [7.31, 5332.72, 10, "国内消费税", 2010],
+                [12.62, 9206.42, 20, "进口货物增值税、消费税", 2010],
+                [8.82, 6434.28, 30, "出口货物增值税、消费税", 2010],
+                [13.40, 9775.43, 10, "营业税", 2010],
+                [15.46, 11278.22, 50, "企业所得税", 2010],
+                [5.82, 4245.75, 55, "资源税", 2010]
+            ],
+            [
+                [30.06, 23465.73, 40, "国内增值税", 2011],
+                [14.29, 11152.38, 10, "国内消费税", 2011],
+                [18.12, 14143.80, 20, "进口货物增值税、消费税", 2011],
+                [17.39, 13576.63, 30, "出口货物增值税、消费税", 2011],
+                [19.62, 15313.66, 10, "营业税", 2011],
+                [23.18, 18094.54, 50, "企业所得税", 2011],
+                [13.53, 10560.13, 55, "资源税", 2011]
+            ],
+            [
+                [34.27, 28625.39, 40, "国内增值税", 2012],
+                [9.11, 7610.82, 10, "国内消费税", 2012],
+                [16.87, 14091.86, 20, "进口货物增值税、消费税", 2012],
+                [12.15, 10148.37, 30, "出口货物增值税、消费税", 2012],
+                [13.49, 11270.36, 30, "营业税", 2012],
+                [17.51, 14622.78, 50, "企业所得税", 2012],
+                [12.46, 10403.83, 55, "资源税", 2012]
+            ],
+            [
+                [33.53, 29964.56, 40, "国内增值税", 2013],
+                [16.02, 14319.59, 10, "国内消费税", 2013],
+                [34.27, 28625.39, 20, "国内增值税", 2012],
+                [9.11, 7610.82, 10, "国内消费税", 2012],
+                [16.87, 14091.86, 20, "进口货物增值税、消费税", 2012],
+                [16.16, 14443.25, 20, "进口货物增值税、消费税", 2013],
+                [12.06, 10773.56, 30, "出口货物增值税、消费税", 2013],
+                [14.97, 13375.48, 10, "营业税", 2013],
+                [24.39, 21792.78, 50, "企业所得税", 2013],
+                [13.44, 12008.87, 55, "资源税", 2013]
+            ],
+            [
+                [27.64, 26183.52, 40, "国内增值税", 2014],
+                [8.31, 7875.02, 10, "国内消费税", 2014],
+                [14.59, 13818.88, 20, "进口货物增值税、消费税", 2014],
+                [14.32, 13564.75, 30, "出口货物增值税、消费税", 2014],
+                [18.16, 17202.42, 10, "营业税", 2014],
+                [22.41, 21224.98, 50, "企业所得税", 2014],
+                [10.49, 9934.77, 55, "资源税", 2014]
+            ],
+            [
+                [26.11, 26213.53, 40, "国内增值税", 2015],
+                [12.10, 12153.30, 10, "国内消费税", 2015],
+                [17.86, 17938.41, 20, "进口货物增值税、消费税", 2015],
+                [18.19, 18266.39, 30, "出口货物增值税、消费税", 2015],
+                [15.87, 15933.29, 10, "营业税", 2015],
+                [17.94, 18011.70, 50, "企业所得税", 2015],
+                [12.18, 12226.11, 55, "资源税", 2015]
+            ],
+            [
+                [34.78, 36666.13, 40, "国内增值税", 2016],
+                [12.47, 13142.86, 10, "国内消费税", 2016],
+                [13.10, 13817.10, 20, "进口货物增值税、消费税", 2016],
+                [9.41, 9917.62, 30, "出口货物增值税、消费税", 2016],
+                [21.51, 22676.82, 10, "营业税", 2016],
+                [21.74, 22921.44, 50, "企业所得税", 2016],
+                [10.07, 10615.13, 55, "资源税", 2016]
+            ],
+            [
+                [26.22, 29023.38, 40, "国内增值税", 2017],
+                [14.12, 15632.69, 10, "国内消费税", 2017],
+                [16.99, 18811.09, 20, "进口货物增值税、消费税", 2017],
+                [11.80, 13062.85, 30, "出口货物增值税、消费税", 2017],
+                [17.79, 19698.53, 10, "营业税", 2017],
+                [24.40, 27009.59, 50, "企业所得税", 2017],
+                [15.82, 17513.67, 55, "资源税", 2017]
+            ],
+            [
+                [34.96, 40251.56, 40, "国内增值税", 2018],
+                [14.53, 16723.67, 10, "国内消费税", 2018],
+                [15.94, 18348.39, 20, "进口货物增值税、消费税", 2018],
+                [13.76, 15846.52, 30, "出口货物增值税、消费税", 2018],
+                [19.95, 22963.88, 10, "营业税", 2018],
+                [21.16, 24362.14, 50, "企业所得税", 2018],
+                [6.94, 7986.61, 55, "资源税", 2018]
+            ]
+        ]
+    };
+    var itemStyle = {
+        normal: {
+            opacity: 0.8,
+            shadowBlur: 10,
+            shadowOffsetX: 0,
+            shadowOffsetY: 0,
+            shadowColor: 'rgba(0, 0, 0, 0.5)'
+        }
+    };
+
+    var sizeFunction = function (x) {
+        var y = Math.sqrt(x / 5e8) + 0.1;
+        return y * 80;
+    };
+    // Schema:
+    var schema = [{
+            name: 'Income',
+            index: 0,
+            text: '百分比',
+            unit: '万'
+        },
+        {
+            name: 'LifeExpectancy',
+            index: 1,
+            text: '税额',
+            unit: '%'
+        },
+        {
+            name: 'Population',
+            index: 2,
+            text: '100',
+            unit: ''
+        },
+        {
+            name: 'Country',
+            index: 3,
+            text: '类型',
+            unit: ''
+        }
+    ];
+
+    var option = {
+        baseOption: {
+            timeline: {
+                axisType: 'category',
+                orient: 'vertical',
+                autoPlay: true,
+                inverse: true,
+                playInterval: 1000,
+                left: null,
+                right: 0,
+                top: 20,
+                bottom: 20,
+                width: 55,
+                height: null,
+                label: {
+                    normal: {
+                        textStyle: {
+                            color: '#3984b3'
+                        }
+                    },
+                    emphasis: {
+                        textStyle: {
+                            color: '#3984b3'
+                        }
+                    }
+                },
+                symbol: 'none',
+                lineStyle: {
+                    color: '#555'
+                },
+                checkpointStyle: {
+                    color: '#bbb',
+                    borderColor: '#777',
+                    borderWidth: 2
+                },
+                controlStyle: {
+                    showNextBtn: false,
+                    showPrevBtn: false,
+                    normal: {
+                        color: '#3984b3',
+                        borderColor: '#3984b3'
+                    },
+                    emphasis: {
+                        color: '#aaa',
+                        borderColor: '#aaa'
+                    }
+                },
+                data: []
+            },
+            title: [{
+                text: data.timeline[0],
+                textAlign: 'center',
+                left: '63%',
+                top: '55%',
+                textStyle: {
+                    fontSize: 100,
+                    color: 'rgba(255, 255, 255, 0.7)'
+                }
+            }, {
+                show: false,
+                text: '标题xxxx',
+                left: 'center',
+                top: 10,
+                textStyle: {
+                    color: '#3984b3',
+                    fontWeight: 'normal',
+                    fontSize: 20
+                }
+            }],
+            tooltip: {
+                padding: 5,
+                backgroundColor: '#3984b3',
+                borderColor: '#3984b3',
+                borderWidth: 1,
+                formatter: function (obj) {
+                    var value = obj.value;
+                    return schema[3].text + '：' + value[3] + '<br>' +
+                        schema[1].text + '：' + value[1] + schema[1].unit + '<br>' +
+                        schema[0].text + '：' + value[0] + schema[0].unit + '<br>' +
+                        schema[2].text + '：' + value[2] + '<br>';
+                }
+            },
+            grid: {
+                top: 100,
+                containLabel: true,
+                left: 30,
+                right: '110'
+            },
+            xAxis: {
+                type: 'log',
+                name: '百分比',
+                max: 100,
+                //min: 300,
+                nameGap: 25,
+                nameLocation: 'middle',
+                nameTextStyle: {
+                    fontSize: 18
+                },
+                splitLine: {
+                    show: false
+                },
+                axisLine: {
+                    lineStyle: {
+                        color: '#3984b3'
+                    }
+                },
+                axisLabel: {
+                    formatter: '{value} %'
+                }
+            },
+            yAxis: {
+                type: 'value',
+                name: '税额',
+                //max: 10000,
+                nameTextStyle: {
+                    color: '#3984b3',
+                    fontSize: 18
+                },
+                axisLine: {
+                    lineStyle: {
+                        color: '#3984b3'
+                    }
+                },
+                splitLine: {
+                    show: false
+                },
+                axisLabel: {
+                    formatter: '{value} 万'
+                }
+            },
+            visualMap: [{
+                show: false,
+                dimension: 3,
+                categories: data.counties,
+                calculable: true,
+                precision: 0.1,
+                textGap: 30,
+                textStyle: {
+                    color: '#3984b3'
+                },
+                inRange: {
+                    color: (function () {
+                        var colors = ['#bcd3bb', '#e88f70', '#edc1a5', '#9dc5c8',
+                            '#e1e8c8', '#7b7c68', '#e5b5b5', '#f0b489', '#928ea8',
+                            '#bda29a'
+                        ];
+                        return colors.concat(colors);
+                    })()
+                }
+            }],
+            series: [{
+                type: 'scatter',
+                itemStyle: itemStyle,
+                data: data.series[0],
+                symbolSize: function (val) {
+                    return val[2];
+                }
+            }],
+            animationDurationUpdate: 1000,
+            animationEasingUpdate: 'quinticInOut'
+        },
+        options: []
+    };
+
+    for (var n = 0; n < data.timeline.length; n++) {
+        option.baseOption.timeline.data.push(data.timeline[n]);
+        option.options.push({
+            title: {
+                show: true,
+                'text': data.timeline[n] + ''
+            },
+            series: {
+                name: data.timeline[n],
+                type: 'scatter',
+                itemStyle: itemStyle,
+                data: data.series[n],
+                symbolSize: function (val) {
+                    return val[2];
+                }
+            }
+        });
+    }
+
+    myChart.setOption(option);
+    myChart.hideLoading();
+</script>
+
+</html>

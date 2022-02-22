@@ -1,0 +1,210 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>决算数据</title>
+    <link rel="stylesheet" href="css/comon0.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/echarts.min.js"></script>
+    <script type="text/javascript" src="js/china.js"></script>
+    <script type="text/javascript" src="js/area_echarts.js"></script>
+    <script language="JavaScript" src="js/js.js"></script>
+</head>
+
+<body>
+    <div class="loading">
+        <div class="loadbox"> <img src="picture/loading.gif"> 页面加载中... </div>
+    </div>
+    <div class="head">
+        <h1>决算数据</h1>
+        <div class="search-wrap">
+            <input type="search" /><div class="search-btn"><i class="fa fa-search fa-2x"></i></div>
+        </div>
+        <div class="search-tips">
+            <ul>
+                <li>山西省太原市</li>
+            </ul>
+        </div>
+    </div>
+    <div class="mainbox">
+        <ul class="clearfix">
+            <li>
+                <div class="boxall" style="height: 2.7rem">
+                    <div class="alltitle">收入结构分析</div>
+
+                    <div class="sycm">
+                        <ul class="clearfix">
+                            <li>
+                                <h2>23043</h2><span>总收入</span>
+                            </li>
+                            <li>
+                                <h2>19915</h2><span>2018年总收入</span>
+                            </li>
+                            <li>
+                                <h2>3128</h2><span>增加</span>
+                            </li>
+                        </ul>
+                        <div style="border-bottom: 1px solid rgba(255,255,255,.1)"></div>
+                        <ul class="clearfix">
+                            <li>
+                                <h2>15375</h2><span>财政拨款补助收入</span>
+                            </li>
+                            <li>
+                                <h2>13265</h2><span>年初预算</span>
+                            </li>
+                            <li>
+                                <h2>2110</h2><span>增加</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="boxfoot"></div>
+                </div>
+                <div class="boxall" style="height: 2.65rem">
+                    <div class="alltitle">收入支出结构分析</div>
+                    <div class="sy" id="echarts1"></div>
+                    <div class="sy" id="echarts2"></div>
+                    <div class="boxfoot"></div>
+                </div>
+                <div class="boxall" style="height: 2.95rem">
+                    <div class="alltitle">收入预、决算对比分析表</div>
+                    <div id="echarts4" style="height: 2.2rem; width: 100%;"></div>
+                    <div class="boxfoot"></div>
+                </div>
+            </li>
+            <li>
+                <div class="bar">
+                    <div class="barbox">
+                        <ul class="clearfix">
+                            <li class="pulll_left counter">23043.08</li>
+                            <li class="pulll_left counter">22935.17</li>
+                        </ul>
+                    </div>
+                    <div class="barbox2">
+                        <ul class="clearfix">
+                            <li class="pulll_left">收入</li>
+                            <li class="pulll_left">支出</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="map">
+                    <div class="map1"><img src="picture/lbx.png"></div>
+                    <div class="map2"><img src="picture/jt.png"></div>
+                    <div class="map3"><img src="picture/map.png"></div>
+                    <div class="map4" id="map_1"></div>
+                </div>
+
+                <div class="dialog">
+                    <div class="dialog-top">
+                        <div class="dialog-top-title">我是title</div>
+                        <div class="dialog-top-tab-wrap">
+                            <div class="dialog-top-tab dialog-top-tab-active">横向对比</div>
+                            <div class="dialog-top-tab">纵向对比</div>
+                        </div>
+                        <div class="dialog-top-close"><i class="fa fa-close"></i></div>
+                        <div class="dialog-top-content-wrap">
+                            <div class="dialog-top-content  dialog-top-content-active">
+                                <div class="echarts9" id="echarts9">11</div>
+                            </div>
+                            <div class="dialog-top-content">
+                                <div class="echarts10" id="echarts10">22</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dialog-bottom">
+                        <div class="dialog-bottom-tab-wrap">
+                            <div class="dialog-bottom-tab dialog-bottom-tab-active">正向变动主要因素</div>
+                            <div class="dialog-bottom-tab">负向变动主要因素</div>
+                        </div>
+                        <div class="dialog-bottom-content-wrap">
+                            <div class="dialog-bottom-content  dialog-bottom-content-active">
+                                <div class="echarts11" id="echarts11">111</div>
+                                <div class="echarts11-data"></div>
+                            </div>
+                            <div class="dialog-bottom-content ">
+                                <div class="echarts12" id="echarts12">22</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="boxall" style="height:5.2rem">
+                    <div class="alltitle">收入支出上下年度分析</div>
+                    <div class="clearfix">
+                        <div class="sy" id="echarts6"></div>
+                        <div class="sy" id="echarts7"></div>
+                        <div class="sy" id="echarts8"></div>
+                    </div>
+                    <div class="addnew">
+                        <div class="tit02"><span>财务指标</span></div>
+                        <div class="financialIndex">
+                            <ul class="clearfix">
+                                <li>
+                                    <h2>100%</h2><span>预算收入完成率</span>
+                                </li>
+                                <li>
+                                    <h2>48.52%</h2><span>人员支出比率</span>
+                                </li>
+                                <li>
+                                    <h2>17.90 万元/人 </h2><span>人均基本支出</span>
+                                </li>
+                                <li>
+                                    <h2>29.17%</h2><span>资产负债率</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="boxfoot"></div>
+                </div>
+                <div class="boxall" style="height: 3.4rem">
+                        <div class="alltitle">年财政拨款补助预算变动</div>
+
+                        <div class="wraptit"> <span>项目名称</span><span>科目编码</span><span>科目名称</span><span>金额</span> </div>
+                        <div class="wrap">
+                            <ul>  
+                                <li >
+                                    <p><span>关于提前下达2016年第一批学生资助补助经费预算的通知</span><span>2050302</span><span>中专教育</span><span>1,910,000.00</span></p>
+                                </li>
+                                <li>  
+                                    <p><span>2016年中等职业学校免学费省级补助经费</span><span>2050302</span><span>中专教育</span><span>2,180,000.00</span></p>
+                                </li>
+                                <li>
+                                    <p><span>2016年第一批中等职业学校国家助学金省级补助经费</span><span>2050302</span><span>中专教育</span><span>360,000.00</span></p>
+                                </li>
+                                <li>
+                                    <p><span>2015年学生资助补助经费（第三批）</span><span>2050305</span><span>高等职业教育</span><span>340,000.00</span></p>
+                                </li>
+                                <li>
+                                    <p><span>关于提前下达 2016 年学生资助补助经费预算的通知</span><span>2050305</span><span>高等职业教育</span><span>340,000.00</span></p>
+                                </li>
+                                <li>
+                                    <p><span>2016 年学生资助补助经费（第三批）</span><span>2050305</span><span>高等职业教育</span><span>576,000.00</span></p>
+                                </li>
+                                <li>
+                                    <p><span>2016 年现代职业教育质量提升计划专项资金预算</span><span>2050305</span><span>高等职业教育</span><span>12,890,000.00</span></p>
+                                </li>
+                                <li>
+                                    <p><span>办学困难补助经费</span><span>2050305</span><span>高等职业教育</span><span>2,000,000.00</span></p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="boxfoot"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="back"></div>
+    <script type="text/javascript">
+       
+    </script>
+    <script type="text/javascript" src="js/jquery.waypoints.min.js"></script>
+    <script type="text/javascript" src="js/jquery.countup.min.js"></script>
+    <script type="text/javascript">
+        $('.counter').countUp();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+{
+    "code": 200,
+    "data": {
+        "山西省太原市农业站":{
+            "department": "山西省太原市农业站",
+            "headOffice": "农业处",
+            "people": 500,
+            "buget": 12.5,
+            "totalExecution": 12.5
+        },
+        "山西省石家庄农业站": {
+            "department": "山西省石家庄农业站",
+            "headOffice": "农业处",
+            "people": 400,
+            "buget": 11.5,
+            "totalExecution": 11.5
+        }   
+    }
+}
